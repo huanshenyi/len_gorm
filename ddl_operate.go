@@ -1,9 +1,12 @@
 package main
 
 import (
-	"gorm.io/driver/mysql"
+	//_ "github.com/jinzhu/gorm/dialects/mysql"
 	"gorm.io/gorm"
-	//v1_gorm "github.com/jinzhu/gorm"
+	"gorm_project/models/relate_table"
+
+	//"gorm_project/models/relate_table"
+	"gorm.io/driver/mysql"
 )
 
 //type User struct {
@@ -23,6 +26,7 @@ func main(){
 	//	panic(err)
 	//}
 	//defer v1_db.Close()
+	//v1_db.AutoMigrate(&relate_table.User{}, &relate_table.UserProfile{})
 	//v1_db.CreateTable(&User{})
 	//v1_db.DropTable("users")
 	//b := v1_db.HasTable(&User{})
@@ -36,6 +40,7 @@ func main(){
 	}
 	db, err := v2_db.DB()
 	defer db.Close()
+	v2_db.AutoMigrate(&relate_table.User{}, &relate_table.UserProfile{})
 	// CreateTable
     //v2_db.AutoMigrate(&User{})
 
