@@ -1,7 +1,5 @@
 package relate_table
 
-import "gorm.io/gorm"
-
 // 属する
 //type User struct {
 //	Id int
@@ -20,15 +18,19 @@ import "gorm.io/gorm"
 //    UId int
 //}
 
-// 含む
+
 type User struct {
-	gorm.Model
+	Id int
+	Name string
+	Age int
+	Addr string
 	UserProfile UserProfile
 }
 
 type UserProfile struct {
-	gorm.Model
-	Number string
-	UserID uint
+	Id int
+	Pic string
+	CPic string
+	Phone string
+	UserId uint
 }
-

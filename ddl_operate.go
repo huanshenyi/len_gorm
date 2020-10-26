@@ -7,6 +7,7 @@ import (
 
 	//"gorm_project/models/relate_table"
 	"gorm.io/driver/mysql"
+	//v1_gorm "github.com/jinzhu/gorm"
 )
 
 //type User struct {
@@ -38,9 +39,11 @@ func main(){
 	if err != nil {
 		panic(err)
 	}
-	db, err := v2_db.DB()
-	defer db.Close()
+	//db, err := v2_db.DB()
+	//defer db.Close()
 	v2_db.AutoMigrate(&relate_table.User{}, &relate_table.UserProfile{})
+	//v2_db.AutoMigrate(&relate_table.User2{}, &relate_table.Article{})
+	//v2_db.AutoMigrate(&relate_table.Article2{}, &relate_table.Tag{})
 	// CreateTable
     //v2_db.AutoMigrate(&User{})
 
