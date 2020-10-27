@@ -72,5 +72,5 @@ func main(){
 
 	var user relate_table.User
 	db.Preload("UserProfile").First(&user, 1)
-	db.Debug().Delete(&user.UserProfile)
+	db.Debug().Delete(&user.UserProfile) //DELETE FROM `user_profiles` WHERE `user_profiles`.`id` = 3
 }
