@@ -1,14 +1,15 @@
 package relate_table
 
-import "gorm.io/gorm"
-
 type Article2 struct {
-	gorm.Model
+	Id int
+	Title string
+	Content string
+	Desc string
 	Tags []Tag `gorm:"many2many:Article2_Tags"`
 }
 
 type Tag struct {
-	gorm.Model
+	Id int
 	Name string
 	Desc string
 }
