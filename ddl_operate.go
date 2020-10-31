@@ -7,7 +7,6 @@ import (
 
 	//"gorm_project/models/relate_table"
 	"gorm.io/driver/mysql"
-	//v1_gorm "github.com/jinzhu/gorm"
 )
 
 //type User struct {

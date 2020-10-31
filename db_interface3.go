@@ -13,6 +13,7 @@ func main()  {
 	if err != nil{
 		panic(err)
 	}
+    db.Logger.LogMode(4)
 
 	// ====== FirstOrInit ======
 	//var user relate_table.User
@@ -27,9 +28,9 @@ func main()  {
 
 	//=========== attrs =============
 	// もし結果がなければ、新しく生成される構造体をuserに入れる
-	//var user relate_table.User
-	//db.Where("name = ?", "13").Attrs(relate_table.User{Name:"test"}).FirstOrInit(&user)
-	//fmt.Println(user)
+	//var user1 relate_table.User
+	//db.Where("name = ?", "13").Attrs(relate_table.User{Name:"test"}).FirstOrInit(&user1)
+	//fmt.Println(user1)
 
     // ============ Assign ==============
     // Assign: 見つかったかどうか関係なく、戻り値にAssignの指定パラメータを入れる、あれば置き換え、なければ追加
